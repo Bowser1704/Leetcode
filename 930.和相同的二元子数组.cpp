@@ -44,6 +44,8 @@ using namespace std;
  * 
  */
 
+// 考虑怎么用递归做。
+
 // @lc code=start
 // Your memory usage beats 5.48 % of cpp submissions (28.2 MB)
 // what happen.
