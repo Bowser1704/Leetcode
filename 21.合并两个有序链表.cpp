@@ -40,18 +40,19 @@ struct ListNode {
 class Solution {
    public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode* root = new ListNode(0), *i = root;
+        // dummyHead
+        ListNode node = ListNode(0), *root = &node, *i = root;
         while (l1 && l2) {
             if (l1->val < l2->val) {
                 i->next = l1;
                 l1 = l1->next;
-            }else{
+            } else {
                 i->next = l2;
                 l2 = l2->next;
             }
             i = i->next;
         }
-        i->next = l1?l1:l2;
+        i->next = l1 ? l1 : l2;
         return root->next;
     }
 };
